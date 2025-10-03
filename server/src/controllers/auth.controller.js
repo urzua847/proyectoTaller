@@ -15,6 +15,7 @@ export async function login(req, res) {
     res.cookie("jwt", accessToken, { httpOnly: true, maxAge: 24 * 60 * 60 * 1000 });
     handleSuccess(res, 200, "Inicio de sesión exitoso", { token: accessToken });
   } catch (error) {
+    console.error("Error en el controlador de login:", error);
     handleErrorServer(res, 500, error.message);
   }
 }

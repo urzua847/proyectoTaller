@@ -1,4 +1,11 @@
-// ... (importaciones existentes)
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Home from './pages/Home';
+import Root from './pages/Root';
+import Error404 from './pages/Error404';
 import ProtectedRoute from './components/ProtectedRoute';
 import './styles/styles.css';
 
@@ -16,7 +23,6 @@ const router = createBrowserRouter([
           </ProtectedRoute>
         )
       },
-      // Añadiremos la ruta /users para administradores más adelante
     ]
   },
   { path: '/auth', element: <Login /> },
@@ -28,4 +34,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <RouterProvider router={router} />
   </React.StrictMode>,
 );
-
