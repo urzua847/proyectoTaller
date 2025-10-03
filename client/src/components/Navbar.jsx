@@ -7,9 +7,10 @@ const Navbar = () => {
     const user = JSON.parse(sessionStorage.getItem('usuario'));
     const userRole = user?.rol;
 
-    const logoutSubmit = () => {
-        logout();
-        navigate('/auth'); 
+    const handleLogout = async (event) => {
+        event.preventDefault(); 
+        await logout(); 
+        navigate('/auth', { replace: true });
     };
 
     return (
@@ -20,7 +21,7 @@ const Navbar = () => {
                     {userRole === 'administrador' && (
                         <li><NavLink to="/users">Usuarios</NavLink></li>
                     )}
-                    <li><a href="/auth" onClick={logoutSubmit}>Cerrar sesión</a></li>
+                    <li><a href="/auth" onClick={handleLogout}>Cerrar sesión</a></li>
                 </ul>
             </div>
         </nav>

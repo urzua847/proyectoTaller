@@ -1,0 +1,40 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px; /* Espacio para la navbar */
+    width: 100%;
+}
+.table-wrapper {
+    width: 90%;
+    max-width: 1200px;
+}
+.top-table {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.title-table {
+    color: #003366;
+}
+.filter-actions {
+    display: flex;
+    gap: 10px;
+}
+.filter-actions button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid #003366;
+    background-color: #003366;
+    color: white;
+    cursor: pointer;
+}
+.filter-actions button:disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+.delete-user-button {
+    background-color: #d9534f !important;
+    border-color: #d9534f !important;
+}

@@ -1,0 +1,17 @@
+.table-container .tabulator {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.table-container .tabulator .tabulator-header {
+    background-color: #003366;
+    color: #fff;
+}
+.tabulator-row.tabulator-selectable:hover {
+    background-color: #eef7ff;
+}
+.tabulator-row.tabulator-selected {
+    background-color: #d4eaff;
+}
+.tabulator .tabulator-footer .tabulator-page {
+    padding: 5px 10px;
+}

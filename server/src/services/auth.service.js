@@ -1,3 +1,4 @@
+// server/src/services/auth.service.js
 "use strict";
 import User from "../entity/user.entity.js";
 import jwt from "jsonwebtoken";

@@ -33,11 +33,11 @@ export async function register(data) {
 }
 
 export async function logout() {
+    sessionStorage.removeItem('usuario');
+    cookies.remove('jwt-auth', { path: '/' });
     try {
         await axios.post('/auth/logout');
-        sessionStorage.removeItem('usuario');
-        cookies.remove('jwt-auth');
     } catch (error) {
-        console.error('Error al cerrar sesión:', error);
+        console.error('No se pudo notificar al servidor del cierre de sesión:', error);
     }
 }
